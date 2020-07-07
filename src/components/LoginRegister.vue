@@ -20,7 +20,8 @@
 				formData: {
 					name: '',
 					email: '',
-					password: ''
+					password: '',
+					color: 'primary'
 				}
 			}
 		},

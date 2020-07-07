@@ -3,7 +3,7 @@
   	<q-banner v-if="!otherUserDetails.online" class="fixed-top text-center bg-grey-4">
   	      {{ otherUserDetails.name }} is offline.
   	</q-banner>
-  	<q-banner :class="{'invisible' : !showMessages}" v-else class="fixed-top text-center bg-green-4">
+  	<q-banner v-else class="fixed-top text-center bg-green-4">
   	      {{ otherUserDetails.name }} is online.
   	</q-banner>
   	<div :class="{'invisible' : !showMessages}" class="q-pa-md column col justify-end">

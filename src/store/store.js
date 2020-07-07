@@ -33,6 +33,7 @@ const actions = {
 				firebaseDb.ref('users/' + userId).set({
 					name: payload.name,
 					email: payload.email,
+					color: payload.color,
 					online: true
 				})
 			})
@@ -62,6 +63,7 @@ const actions = {
 		    	commit('setUserDetails', {
 		    		name: userDetails.name,
 		    		email: userDetails.email,
+		    		color: userDetails.color,
 		    		userId: userId
 		    	})
 		    }) 
