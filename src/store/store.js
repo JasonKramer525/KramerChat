@@ -139,6 +139,14 @@ const actions = {
 
 		firebaseDb.ref('chats/' + payload.otherUserId + '/' + state.userDetails.userId)
 			.push(payload.message)
+	},
+	firebaseChangeColor({dispatch}, color){
+		dispatch('firebaseUpdateUser', {
+		    	userId: state.userDetails.userId,
+		    	updates: {
+		    		color: color
+		    	}
+		})
 	}
 }
 const getters = {
@@ -150,6 +158,9 @@ const getters = {
 			}
 		})
 		return usersFiltered
+	},
+	currentDetails: state => {
+		return state.users[state.userDetails.userId]
 	}
 }
 export default {
